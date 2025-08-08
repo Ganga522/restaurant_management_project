@@ -3,18 +3,21 @@
 <head>
     <title>Restaurant Menu</title>
 </head>
-<body>
-    <h1>Restaurant Menu</h1>
-    <ul>
-        {% for item in menu %}
-            <li>
-                <h3>{{item.name}}</h3>
-                <p>{{item.description}}</p>
-                <strong>{{item.price}}</strong>
-            </li>
-        {% empty %}
-            <li> No items found.</li>
-        {% endfor %}
-    </ul>
+<body style="font-family:Arial,sans-serif; background-color:#f8f8f8; margin:0; padding:0;">
+    <div style="width:80%; margin:auto; padding:20px;">
+        <h1 style="text-align:center; color:#333; margin-top:20px;">Restuarant Menu</h1>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px;margin-top:30px;">
+
+            {% for item in menu %}
+                <div style="background-color:white:padding:15px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0,1);">
+                    <h3 style="color:#d35400; margin-top:0;">{{item.name}}</h3>
+                    <p style="font-size:14px; color:#555; ">{{item.description}}</p>
+                    <span style="display:inline-block;margin-top:10px;font-weight:bold;color:#27ae60">{{item.price}}</span>
+                </div>
+            {% empty %}
+                <p> No items found.<p>
+            {% endfor %}
+        </div>
+    </div>
 </body>
 </html>
