@@ -1,9 +1,11 @@
 import requests
 from django.shortcuts import render
+import django.conf and import settings
 
 # Create your views here.
 
 def homepage(request):
     response=requests.get('http://localhost:8000/api/products/menu/')
     menu=response.json() if response.status_code == 200 else []
-    return render(request,'home/index.html',{'menu':menu})
+    restaurant_name=getattr(settings,'RESTAURANT_NAME','MY RESTAURANT')
+    return render(request,'home/index.html',{'menu':menu,'restaurant':restaurant_name})
