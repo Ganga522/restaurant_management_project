@@ -13,4 +13,7 @@ def homepage(request):
 def about_us(request):
     return render(request,'home/about.html')
 
-    
+def contact_view(request):
+    return render(request,'home/contact.html',{
+        'restuarant_name':'My Awesome Restuarant'
+    })
