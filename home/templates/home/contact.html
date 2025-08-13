@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Contact Us - {{restaurant_name|default:"Our Restaurant"}}</title>
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
+</head>
+<body>
+    <div class="page-title" style="text-align:center;">
+        <h1 class="page-title">Contact Us</h1>
+        <p style="font-size:18px; color:#555; line-height:1.6;">
+            We'd love to hear from you! Feel free to reach out using the details below.
+        </p>
+
+        <div style='margin-top:20px font-size:16px; color:#333;'>
+            <p><strong> Address: </strong> 123 Food Street, Falvour Town </p>
+            <p><strong> Phone: </strong> (555) 123-4567 </p>
+            <p><strong> Email: </strong> contact@ourrestaurant.com </p>
+        </div>
+
+        <img src="https://via.placeholder.com/500×300" alt="Contact" class="about-img">
+    </div>
+</body>
+</html>
