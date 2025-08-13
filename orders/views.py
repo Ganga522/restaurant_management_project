@@ -5,7 +5,6 @@ class MenuItemListView(APIView):
     """
     View to return a list of hardcoded menu items.
     Later,this will be replaced with database queries.
-
     """
 
     def get(self,request):
@@ -15,4 +14,4 @@ class MenuItemListView(APIView):
             {"id":2,"name":"Veggie Burger","price":6.49},
             {"id":3,"name":"Pasta Alfredo","price":7.99},
         ]
-        return Resonse(menu_items)
+        return Response(menu_items)
