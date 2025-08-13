@@ -1,6 +1,6 @@
 import requests
 from django.shortcuts import render
-import django.conf and import settings
+from django.conf import settings
 
 # Create your views here.
 
