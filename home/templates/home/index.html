@@ -8,7 +8,7 @@
 <body>
     <div class="container">
         <div class="nav-center">
-            <a href="{% url ''contact %}" class='nav-link'>
+            <a href="{% url 'contact' %}" class='nav-link'>
                 Contact
             </a>
             
@@ -16,7 +16,12 @@
                 About Us
             </a>
         </div>
+
         <h1 class="page-title">{{restaurant_name}} Menu</h1>
+        <p class="phone_number">
+            📞<a href="tel:{{phone_number}}"> {{phone_number}} </a>
+        </p>
+
         <div class="menu-grid">
 
             {% for item in menu %}
