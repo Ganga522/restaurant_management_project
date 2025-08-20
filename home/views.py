@@ -1,6 +1,7 @@
 import requests
 from django.shortcuts import render
 from django.conf import settings
+from django.conf.urls import handler404
 
 # Create your views here.
 
@@ -28,3 +29,9 @@ def contact_view(request):
         'restuarant_name':getattr(settings,'RESTUARANT','MY AWESOME Restaurant'),
         'phone_number':getattr(settings,'RESTAURANT_PHONE_NUMBER','+91 9381253611')
     })
+
+
+def custom_404_view(request,exception):
+    return render(request,'404.html',status=404)
+
+handler404=custom_404_view
